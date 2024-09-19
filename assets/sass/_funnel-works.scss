@@ -46,6 +46,10 @@
         counter-reset: step;
         margin: 24px 42px 51px;
 
+        @include col {
+            margin: 24px 6px 50px;
+        }
+
         &::before,
         & .progress {
             content: "";
@@ -100,6 +104,11 @@
             text-align: center;
             line-height: 20px;
             font-weight: 600;
+            @include col {
+                font-size: 11px;
+                max-width: 90px;
+                line-height: 15px;
+            }
         }
 
         & .progress_step_active {
@@ -362,7 +371,6 @@
                 padding: 10px 14px;
                 color: #949494;
                 font-weight: 400;
-                font-family: (--secondary-font);
                 padding: 10px 14px !important;
                 background: #FFFFFF;
                 border: 1px solid #D0D5DD;
@@ -780,6 +788,22 @@
 
 }
 
+.form_step_field {
+    input, textarea {
+        font-family: var(--font-archivo);
+    }
+}
+
+.title_with_arrow {
+    display: flex; 
+    align-items: center;
+    gap: 8px;
+    i {
+        font-size: 20px;
+        transform: translateY(3px);
+    }
+}
+
 
 //modal styles 
 .step_modal {
@@ -832,6 +856,13 @@
                 li {
                     font-size: 14px;
                 }
+            }
+        }
+    }
+    @include col {
+        .modal-body {
+            h3 {
+                font-size: 20px;
             }
         }
     }

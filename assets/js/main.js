@@ -105,20 +105,6 @@
 
     });
 
-    // Section scroll Id
-    // $(".st_header_nav .scroll").on("click", function (event) {
-
-    //     $("html,body").animate({
-    //         scrollTop: $(this.hash).offset().top - 80
-    //     });
-    // });
-
-    // $(".main_mobile_menu .scroll").on("click", function (event) {
-
-    //     $("html,body").animate({
-    //         scrollTop: $(this.hash).offset().top - 80
-    //     });
-    // });
 
 
     $('.scroll').on('click', function () {
