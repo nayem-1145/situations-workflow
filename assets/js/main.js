@@ -240,6 +240,29 @@
 
 
 
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzAwd7trKb6dA2jgOpMRJ5q143-8Q9yowST9qWoDCwlIuWQudeTnzr8hqKX7GslsgFc/exec'
+
+    const form = document.forms['situations-step-form']
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, {
+                method: 'POST',
+                body: new FormData(form)
+            })
+            .then(response => $(".subscribe_field").append("<span class='st_submit_form_alert'>Thanks. The form has been submitted</span>")  )
+            .then(() => {
+                setTimeout(function(){
+                    $(".subscribe_field .st_submit_form_alert").hide();
+                }, 3500)
+            })
+            .catch(error => console.error('Error!', error.message))
+    });
+
+    
+
+
+
+
 
 
 })(jQuery);
