@@ -26,7 +26,7 @@
                 <div class="row align-items-center">
                     <div class="col-md-5 col-lg-4 col-7">
                         <div class="st_header_logo">
-                            <a href="index.html"><img src="assets/images/logo.png" alt="logo" class="img-fluid"></a>
+                            <a href="home.html"><img src="assets/images/logo.png" alt="logo" class="img-fluid"></a>
                         </div>
                     </div>
                     <div class="col-lg-8 col-md-7 col-5">
@@ -39,8 +39,7 @@
                                     <li><a href="about.html">About us</a></li>
                                 </ul>
                             </nav>
-                            <div class="st_header_btns d-flex gap-3 align-items-center justify-content-end">
-                                <a target="_blank" href="https://situations-596dcd59e0eb.herokuapp.com/" class="template-btn primary-btn">Try our prototype</a>
+                            <div class="st_header_btns d-flex gap-3 align-items-center justify-content-end d-lg-none">
                                 <button type="button" class="st_mobile_menu_toggle menu_btn">
                                     <span></span>
                                     <span></span>
@@ -65,47 +64,17 @@
                             <!-- Progress bar -->
                             <div class="progressbar">
                                 <div class="progress" id="progress"></div>
-                                <div class="progress_step progress_step_active" data-title="Introduce yourself"></div>
-                                <div class="progress_step" data-title="Describe your Situation"></div>
+                                <div class="progress_step progress_step_active" data-title="Describe your Situation"></div>
                                 <div class="progress_step" data-title="Additional Information"></div>
-                                <div class="progress_step" data-title="Strategies & Solutions"></div>
+                                <div class="progress_step" data-title="Strategies & Actions"></div>
+                                <div class="progress_step" data-title="Products and Services"></div>
                                 <div class="progress_step" data-title="Share your Feedback!"></div>
                             </div>
 
                             <!-- Steps 1-->
                             <div class="form_step form_step_active">
                                 <div class="row g-5 g-md-4">
-                                    <div class="col-md-5">
-                                        <div class="form_step_thumb text-center">
-                                            <img src="assets/images/form/step-1.png" alt="Introduce yourself" class="img-fluid">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-7">
-                                        <div class="form_step_content">
-                                            <h2>Please introduce yourself</h2>
-                                            <div class="step_info">
-                                                <img src="assets/images/idea.svg" alt="idea" class="img-fluid">
-                                                <p>We do not want to make wild guesses about you. Please describe yourself using as many or as little words as you are comfortable.</p>
-                                            </div>
-                                        </div>
-                                        <div class="form_step_field mn-height-420">
-                                            <div class="input-group">
-                                                <label class="form-label link" for="introduce-yourself"><a href="#modal_step_1" data-bs-toggle="modal">See examples</a></label>
-                                                <textarea name="the-textarea" id="step_message" maxlength="500" placeholder="Your self-introduction goes here..." autofocus></textarea>
-                                                <div id="the_count">(<span id="current">0</span><span id="maximum_limit">/500</span>)</div>
-                                            </div>
-                                            <div class="text-end w-100">
-                                                <a href="#" class="btn btn_next template-btn primary-btn ml-auto text-white">Submit</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Steps 2-->
-                            <div class="form_step">
-                                <div class="row g-5 g-md-4">
-                                    <div class="col-md-5">
+                                    <div class="col-md-5 d-none d-md-block">
                                         <div class="form_step_thumb text-center">
                                             <img src="assets/images/form/step-2.png" alt="Your Situation" class="img-fluid">
                                         </div>
@@ -124,12 +93,7 @@
                                         <div class="form_step_field mn-height-420">
                                             <div class="input-group">
                                                 <label class="form-label link" for="your-ituation"><a href="#modal_step_2" data-bs-toggle="modal">See examples</a></label>
-                                                <textarea name="the-textarea" id="step_message" maxlength="500" placeholder="Your self-introduction goes here..." autofocus></textarea>
-                                                <div id="the_count">(
-                                                    <span id="current">0</span>
-                                                    <span id="maximum_limit">/ 500</span>
-                                                    )
-                                                </div>
+                                                <textarea name="the-textarea" id="step_message" maxlength="500" placeholder="Describe your situation..." autofocus></textarea>
                                             </div>
                                             <div class="text-end w-100">
                                                 <a href="#" class="btn btn_next template-btn primary-btn ml-auto text-white">Submit</a>
@@ -139,10 +103,10 @@
                                 </div>
                             </div>
 
-                            <!-- Steps 3-->
+                            <!-- Steps 2-->
                             <div class="form_step">
                                 <div class="row g-5 g-md-4">
-                                    <div class="col-md-5">
+                                    <div class="col-md-5 d-none d-md-block">
                                         <div class="form_step_thumb text-center">
                                             <img src="assets/images/form/step-3.png" alt="Your Situation" class="img-fluid">
                                         </div>
@@ -187,7 +151,7 @@
                                 </div>
                             </div>
 
-                            <!-- Steps 4-->
+                            <!-- Steps 3-->
                             <div class="form_step solution_step">
                                 <div class="row g-5 g-md-4">
                                     <div class="col-md-12">
@@ -198,15 +162,20 @@
                                                 <ul>
                                                     <li>Review the proposed Strategies to handle this Situation</li>
                                                     <li>Explore possible Actions and their Results</li>
+                                                    <li>Select Strategies that you want to explore to see suggested products and services.</li>
                                                 </ul>
                                             </div>
-                                            <div class="accordion_wrapper">
+                                            <h3>Recommended Strategies</h3>
+                                            <div class="accordion_wrapper mb-5">
                                                 <!-- Start AcCordion Items  -->
                                                 <div class="accordion_item">
+                                                    <p>
+                                                        <input type="checkbox" name="solution_result1" id="solution_result">
+                                                        <label for="solution_result"></label>
+                                                    </p>
                                                     <h2 class="accordion__title">
                                                         <span class="sub_heading">Strategy 1:</span>
-                                                        Expand Digital Marketing Presence
-                                                        <i class="fas fa-angle-down"></i>
+                                                        Expand Digital Marketing Presence<i class="fas fa-angle-down"></i>
                                                     </h2>
                                                     <div class="accordion__content">
                                                         <!-- nested acordion  -->
@@ -261,10 +230,13 @@
                                                 </div>
                                                 <!-- AcCordion Items  -->
                                                 <div class="accordion_item accordion--open">
+                                                    <p>
+                                                        <input type="checkbox" name="solution_result2" id="solution_result2">
+                                                        <label for="solution_result2"></label>
+                                                    </p>
                                                     <h2 class="accordion__title">
                                                         <span class="sub_heading">Strategy 2:</span>
-                                                        Improve Customer Experience
-                                                        <i class="fas fa-angle-down"></i>
+                                                        Improve Customer Experience<i class="fas fa-angle-down"></i>
                                                     </h2>
                                                     <div class="accordion__content">
                                                         <!-- nested acordion  -->
@@ -284,13 +256,13 @@
                                                             </div>
                                                         </div>
                                                         <!-- nested acordion  -->
-                                                        <div class="accordion_item accordion--nested accordion--open">
+                                                        <div class="accordion_item accordion--nested">
                                                             <h4 class="accordion__title">
                                                                 <span class="sub_heading">Action 2:</span>
                                                                 Implement SEO improvements on the website.
                                                                 <i class="fas fa-angle-down"></i>
                                                             </h4>
-                                                            <div class="accordion__content" style="display: block;">
+                                                            <div class="accordion__content">
                                                                 <span class="sub_heading">Results:</span>
                                                                 <ul class="result_list">
                                                                     <li>20% increase in website traffic within 2 months.</li>
@@ -319,6 +291,10 @@
                                                 </div>
                                                 <!-- AcCordion Items  -->
                                                 <div class="accordion_item">
+                                                    <p>
+                                                        <input type="checkbox" name="solution_result3" id="solution_result3">
+                                                        <label for="solution_result3"></label>
+                                                    </p>
                                                     <h2 class="accordion__title">
                                                         <span class="sub_heading">Strategy 3:</span>
                                                         Boost Employee Productivity
@@ -377,76 +353,226 @@
                                                 </div>
                                                 <!-- END AcCordion Items  -->
                                             </div>
+                                            <h3>Frequently failing Strategies</h3>
+                                            <div class="accordion_wrapper">
+                                                <!-- Start AcCordion Items  -->
+                                                <div class="accordion_item">
+                                                    <p>
+                                                        <input type="checkbox" name="failing_result1" id="failing_result">
+                                                        <label for="failing_result"></label>
+                                                    </p>
+                                                    <h2 class="accordion__title">
+                                                        <span class="sub_heading">Strategy 1:</span>
+                                                        Expand Digital Marketing Presence
+                                                        <i class="fas fa-angle-down"></i>
+                                                    </h2>
+                                                    <div class="accordion__content">
+                                                        <!-- nested acordion  -->
+                                                        <div class="accordion_item accordion--nested">
+                                                            <h4 class="accordion__title">
+                                                                <span class="sub_heading">Action 1:</span>
+                                                                Launch a targeted social media campaign.
+                                                                <i class="fas fa-angle-down"></i>
+                                                            </h4>
+                                                            <div class="accordion__content">
+                                                                <span class="sub_heading">Results:</span>
+                                                                <ul class="result_list">
+                                                                    <li>20% increase in website traffic within 2 months.</li>
+                                                                    <li>15% growth in social media followers.</li>
+                                                                    <li>Improved brand recognition in target demographics.</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <!-- nested acordion  -->
+                                                        <div class="accordion_item accordion--nested">
+                                                            <h4 class="accordion__title">
+                                                                <span class="sub_heading">Action 2:</span>
+                                                                Implement SEO improvements on the website.
+                                                                <i class="fas fa-angle-down"></i>
+                                                            </h4>
+                                                            <div class="accordion__content">
+                                                                <span class="sub_heading">Results:</span>
+                                                                <ul class="result_list">
+                                                                    <li>20% increase in website traffic within 2 months.</li>
+                                                                    <li>15% growth in social media followers.</li>
+                                                                    <li>Improved brand recognition in target demographics.</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <!-- nested acordion  -->
+                                                        <div class="accordion_item accordion--nested">
+                                                            <h4 class="accordion__title">
+                                                                <span class="sub_heading">Action 3:</span>
+                                                                Start a weekly email newsletter.
+                                                                <i class="fas fa-angle-down"></i>
+                                                            </h4>
+                                                            <div class="accordion__content">
+                                                                <span class="sub_heading">Results:</span>
+                                                                <ul class="result_list">
+                                                                    <li>20% increase in website traffic within 2 months.</li>
+                                                                    <li>15% growth in social media followers.</li>
+                                                                    <li>Improved brand recognition in target demographics.</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- AcCordion Items  -->
+                                                <div class="accordion_item">
+                                                    <p>
+                                                        <input type="checkbox" name="failing_result2" id="failing_result2">
+                                                        <label for="failing_result2"></label>
+                                                    </p>
+                                                    <h2 class="accordion__title">
+                                                        <span class="sub_heading">Strategy 2:</span>
+                                                        Improve Customer Experience
+                                                        <i class="fas fa-angle-down"></i>
+                                                    </h2>
+                                                    <div class="accordion__content">
+                                                        <!-- nested acordion  -->
+                                                        <div class="accordion_item accordion--nested">
+                                                            <h4 class="accordion__title">
+                                                                <span class="sub_heading">Action 1:</span>
+                                                                Launch a targeted social media campaign.
+                                                                <i class="fas fa-angle-down"></i>
+                                                            </h4>
+                                                            <div class="accordion__content">
+                                                                <span class="sub_heading">Results:</span>
+                                                                <ul class="result_list">
+                                                                    <li>20% increase in website traffic within 2 months.</li>
+                                                                    <li>15% growth in social media followers.</li>
+                                                                    <li>Improved brand recognition in target demographics.</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <!-- nested acordion  -->
+                                                        <div class="accordion_item accordion--nested">
+                                                            <h4 class="accordion__title">
+                                                                <span class="sub_heading">Action 2:</span>
+                                                                Implement SEO improvements on the website.
+                                                                <i class="fas fa-angle-down"></i>
+                                                            </h4>
+                                                            <div class="accordion__content">
+                                                                <span class="sub_heading">Results:</span>
+                                                                <ul class="result_list">
+                                                                    <li>20% increase in website traffic within 2 months.</li>
+                                                                    <li>15% growth in social media followers.</li>
+                                                                    <li>Improved brand recognition in target demographics.</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <!-- nested acordion  -->
+                                                        <div class="accordion_item accordion--nested">
+                                                            <h4 class="accordion__title">
+                                                                <span class="sub_heading">Action 3:</span>
+                                                                Start a weekly email newsletter.
+                                                                <i class="fas fa-angle-down"></i>
+                                                            </h4>
+                                                            <div class="accordion__content">
+                                                                <span class="sub_heading">Results:</span>
+                                                                <ul class="result_list">
+                                                                    <li>20% increase in website traffic within 2 months.</li>
+                                                                    <li>15% growth in social media followers.</li>
+                                                                    <li>Improved brand recognition in target demographics.</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- End AcCordion Items  -->
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-12 pt-4 mt-2">
-                                        <div class="form_step_content form_step_related_service">
-                                            <h2>Relevant Products and Services:</h2>
-                                            <div class="step_info">
-                                                <img src="assets/images/idea.svg" alt="idea" class="img-fluid" />
-                                                <ul>
-                                                    <li>Review the proposed Strategies to handle this Situation</li>
-                                                    <li>Explore possible Actions and their Results</li>
-                                                </ul>
-                                            </div>
-                                            <div class="related_service_product pt-2">
-                                                <h2>Products:</h2>
-                                                <div class="row g-4 pb-2">
-                                                    <div class="col-md-4">
-                                                        <div class="related_service_item">
-                                                            <h3>AI-Driven Customer Insights Tool</h3>
-                                                            <p>Uses machine learning to analyze customer data and deliver personalized recommendations.</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="related_service_item">
-                                                            <h3>E-commerce Dashboard</h3>
-                                                            <p>A centralized platform for managing inventory, sales, and customer interactions in real time.</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="related_service_item">
-                                                            <h3>CRM Software</h3>
-                                                            <p>Streamlines customer relationship management, providing sales automation and communication tools.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="related_service_service pt-2">
-                                                <h2 class="mt-4">Services:</h2>
-                                                <div class="row g-4">
-                                                    <div class="col-md-4">
-                                                        <div class="related_service_item">
-                                                            <h3>Website Design and Development</h3>
-                                                            <p>End-to-end web design, development, and maintenance for businesses looking to enhance their online presence.</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="related_service_item">
-                                                            <h3>Digital Marketing Consultation</h3>
-                                                            <p>Tailored strategies for SEO, PPC, and social media to grow your online reach.</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="related_service_item">
-                                                            <h3>Custom Software Solutions</h3>
-                                                            <p>Development of bespoke software tailored to meet unique business requirements and workflows.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="text-end w-100 mt-4">
+                                    <div class="col-md-12">
+                                        <div class="text-end w-100">
                                             <a href="#" class="btn btn_next template-btn primary-btn ml-auto text-white">Next</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
+                            <!-- Steps 4-->
+                            <div class="form_step rlt_pd_service">
+                                <div class="col-md-12 pt-4 mt-2">
+                                    <div class="form_step_content form_step_related_service">
+                                        <h2>Relevant Products and Services:</h2>
+                                        <div class="step_info">
+                                            <img src="assets/images/idea.svg" alt="idea" class="img-fluid" />
+                                            <ul>
+                                                <li>Review the proposed Strategies to handle this Situation</li>
+                                                <li>Explore possible Actions and their Results</li>
+                                            </ul>
+                                        </div>
+                                        <div class="related_service_product pt-2">
+                                            <h3>Products</h3>
+                                            <div class="accordion_wrapper">
+                                                <!-- AcCordion Items  -->
+                                                <div class="accordion_item">
+                                                    <h2 class="accordion__title">AI-Driven Customer Insights Tool
+                                                        <i class="fas fa-angle-down"></i>
+                                                    </h2>
+                                                    <div class="accordion__content ps-1">
+                                                        <p>Uses machine learning to analyze customer data and deliver personalized recommendations.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion_item">
+                                                    <h2 class="accordion__title">E-commerce Dashboard
+                                                        <i class="fas fa-angle-down"></i>
+                                                    </h2>
+                                                    <div class="accordion__content ps-1">
+                                                        <p>A centralized platform for managing inventory, sales, and customer interactions in real time.</p> 
+                                                    </div>
+                                                </div>
+                                                <div class="accordion_item">
+                                                    <h2 class="accordion__title">CRM Software
+                                                        <i class="fas fa-angle-down"></i>
+                                                    </h2>
+                                                    <div class="accordion__content ps-1">
+                                                        <p>Streamlines customer relationship management, providing sales automation and communication tools.</p> 
+                                                    </div>
+                                                </div>
+                                                <!-- AcCordion Items  -->
+                                                <h3 class="mt-5">Services</h3>
+                                                <div class="accordion_item">
+                                                    <h2 class="accordion__title">Website Design and Development
+                                                        <i class="fas fa-angle-down"></i>
+                                                    </h2>
+                                                    <div class="accordion__content ps-1">
+                                                        <p>End-to-end web design, development, and maintenance for businesses looking to enhance their online presence.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion_item">
+                                                    <h2 class="accordion__title">Digital Marketing Consultation
+                                                        <i class="fas fa-angle-down"></i>
+                                                    </h2>
+                                                    <div class="accordion__content ps-1">
+                                                        <p>Tailored strategies for SEO, PPC, and social media to grow your online reach.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="accordion_item">
+                                                    <h2 class="accordion__title">Cutom Software Solutions
+                                                        <i class="fas fa-angle-down"></i>
+                                                    </h2>
+                                                    <div class="accordion__content ps-1">
+                                                        <p>Development of bespoke software tailored to meet unique business requirements and workflows.</p>
+                                                    </div>
+                                                </div>
+                                                <!-- End AcCordion Items  -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mt-4">
+                                    <div class="text-end w-100">
+                                        <a href="#" class="btn btn_next template-btn primary-btn ml-auto text-white">Submit</a>
+                                    </div>
+                                </div>
+                            </div>
+
                             <!-- Steps 5-->
-                            <div class="form_step">
+                            <div class="form_step feeback_step">
                                 <div class="row g-5 g-md-4">
-                                    <div class="col-md-5">
+                                    <div class="col-md-5 d-none d-md-block">
                                         <div class="form_step_thumb text-center">
                                             <img src="assets/images/form/step-5.png" alt="Your Situation" class="img-fluid">
                                         </div>
@@ -466,7 +592,7 @@
                                                 <h4>Did you find our recommendations useful?</h4>
                                                 <div class="input_radio_field">
                                                     <p>
-                                                        <input type="radio" id="nUseful" name="recommendations_usefull" value="no" checked>
+                                                        <input type="radio" id="nUseful" name="recommendations_usefull" value="no" >
                                                         <label for="nUseful">No</label>
                                                     </p>
                                                     <p>
@@ -479,7 +605,7 @@
                                                 <h4>Did you learn anything new regarding your situation?</h4>
                                                 <div class="input_radio_field">
                                                     <p>
-                                                        <input type="radio" id="nSituation" name="learned_anything_new" value="no" checked>
+                                                        <input type="radio" id="nSituation" name="learned_anything_new" value="no" >
                                                         <label for="nSituation">No</label>
                                                     </p>
                                                     <p>
@@ -492,7 +618,7 @@
                                                 <h4>Are recommended products and services relevant?</h4>
                                                 <div class="input_radio_field">
                                                     <p>
-                                                        <input type="radio" id="nRelevant" name="products_and_services_relevant" value="no" checked>
+                                                        <input type="radio" id="nRelevant" name="products_and_services_relevant" value="no" >
                                                         <label for="nRelevant">No</label>
                                                     </p>
                                                     <p>
@@ -505,14 +631,14 @@
                                                 <h4>Suggest one thing you want to improve in our product. We will do this for you!</h4>
                                                 <div class="input-group">
                                                     <textarea name="your_suggestion" id="step_message" maxlength="500" placeholder="Share your thoughts here..." autofocus></textarea>
-                                                    <div id="the_count">(
-                                                        <span id="current">0</span>
-                                                        <span id="maximum_limit">/ 500</span>
-                                                        )
-                                                    </div>
                                                 </div>
                                             </div>
-
+                                            <div class="input-group">
+                                                <h4>Add your email to get notified about our full featured product launch:</h4>
+                                                <div class="input-group">
+                                                    <input type="email" name="your-email" id="y-email" placeholder="Your email..">
+                                                </div>
+                                            </div>
                                             <div class="text-end w-100">
                                                 <a href="#" class="btn btn_next template-btn primary-btn ml-auto text-white">Submit</a>
                                             </div>
@@ -530,20 +656,12 @@
                                         </div>
                                         <div class="form_step_content">
                                             <h2>Thanks for your feedback!</h2>
-                                            <p class="mx-auto">Please provide us with your email to get informed about our full featured product launch:</p>
-                                        </div>
-                                        <div class="form_step_field question_field subscribe_field">
-                                            <form action="#" method="post" class="subscribe_form" id="subscribe_form">
-                                                <div class="input-group">
-                                                    <input type="email" id="email" name="user-email" placeholder="Your email.." required>
-                                                    <button type="submit" class="btn template-btn primary-btn ml-auto text-white">Submit</button>
-                                                </div>
-                                            </form>
+                                            <a href="index.html" class="btn text-white template-btn primary-btn">Describe Another Situation</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                    </div>
                     <!-- End Steps  -->
                     </form>
                 </div>
@@ -554,7 +672,7 @@
 
 
         <!--modal popup start-->
-        
+
         <!-- Modal for step 1-->
         <div class="modal fade step_modal" id="modal_step_1">
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -632,7 +750,7 @@
                         <p class="mb-0">Copyright (©) 2024 by Situations, Inc.</p>
                     </div>
                     <div class="st_footer_widget">
-                        <a href="index.html"><img src="assets/images/footer-logo.png" alt="logo" class="st_footer_logo img-fluid" ></a>
+                        <a href="home.html"><img src="assets/images/footer-logo.png" alt="logo" class="st_footer_logo img-fluid"></a>
                         <ul class="st_footer_nav">
                             <li><a href="about.html">About Us</a></li>
                             <li><a href="faq.html">FAQ</a></li>
@@ -656,7 +774,7 @@
             <div class="popMenubarArea">
                 <div class="popMenu_top">
                     <div class="menu_pop_logo">
-                        <a href="index.html">
+                        <a href="home.html">
                             <img src="assets/images/logo.png" alt="logo">
                         </a>
                     </div>
@@ -671,9 +789,6 @@
                             <li><a href="about.html">About Us</a></li>
                         </ul>
                     </nav>
-                    <div class="menuPopup_btn d-flex gap-3 align-items-center justify-content-center">
-                        <a href="https://situations-596dcd59e0eb.herokuapp.com/" target="_blank" class="template-btn primary-btn">Try our prototype</a>
-                    </div>
                 </div>
             </div>
         </div>
